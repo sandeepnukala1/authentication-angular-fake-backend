@@ -1,0 +1,39 @@
+:host {
+  background-color: var(--bs-gray-300);
+  display: block;
+}
+
+.center-align-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-card {
+  background: var(--bs-white);
+  padding: 1.5rem;
+  margin-right: 0;
+  margin-left: 0;
+  border-width: 0.2rem;
+}
+
+.align-icon {
+  height: 100%;
+  background: var(--bs-white);
+  padding: 0.75rem 1.25rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.border-red {
+  border-left: 1px solid var(--bs-red);
+  border-top: 1px solid var(--bs-red);
+  border-bottom: 1px solid var(--bs-red);
+}
+
+.icon-border-red {
+  border-right: 1px solid var(--bs-red);
+  border-top: 1px solid var(--bs-red);
+  border-bottom: 1px solid var(--bs-red);
+}

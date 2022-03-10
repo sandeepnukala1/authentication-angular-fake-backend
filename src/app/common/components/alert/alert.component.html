@@ -1,0 +1,11 @@
+<ng-container *ngIf="message">
+<div class="alert">
+  <div class="alert-center-align">
+    <div [ngClass]="message.cssClass">
+      <ng-container *ngIf="message.type === 'error'"><i class="fa-solid fa-circle-exclamation"></i></ng-container>
+        {{message.text}}
+    </div>
+    <div [ngClass]="message.cssClass"><span><i (click)="clear()" class="fa-solid fa-xmark" style="cursor: pointer;"></i></span></div>
+  </div>
+</div>
+</ng-container>

@@ -1,0 +1,40 @@
+<app-alert></app-alert>
+<div class="container">
+    <div class="form-group center-align-content row">
+      <form [formGroup] = "form" (ngSubmit)="submit()">
+        <div class="row d-flex justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+          <div class="card shadow-2-strong">
+            <div class="card-body p-5">
+
+              <img src="./../../../assets/images/bhes-horizontal.svg" alt="bright horizons logo">
+                <label class="form-label" for="username">Username</label>
+                <div class="input-group">
+                  <input class="form-control form-control-lg" formControlName="username" type="text" id="username" 
+                    [ngClass]="form.controls['username'].touched && form.controls['username'].hasError('required') ? 'border-red': ''">
+                  <div class="input-group-append">
+                    <span class="input-group-text align-icon" 
+                    [ngClass]="form.controls['username'].touched && form.controls['username'].hasError('required') ? 'icon-border-red': ''"><i class="fa-solid fa-user"></i></span>
+                  </div>
+                </div>
+                <app-required-validation [form]="form" [formControlKey]="'username'"></app-required-validation>
+              
+                <label class="form-label mt-4" for="password">Password</label>
+                <div class="input-group">
+                  <input class="form-control form-control-lg" formControlName="password" type="password" id="password"
+                  [ngClass]="form.controls['password'].touched && form.controls['password'].hasError('required') ? 'border-red': ''">
+                    <div class="input-group-append">
+                      <span class="input-group-text align-icon" 
+                      [ngClass]="form.controls['password'].touched && form.controls['password'].hasError('required') ? 'icon-border-red': ''"><i class="fa-solid fa-lock"></i></span>
+                    </div>
+                </div>
+                <app-required-validation [form]="form" [formControlKey]="'password'"></app-required-validation>
+                
+              <button type="submit" class="btn btn-warning btn-lg btn-block mt-4" style="width: 100%;">LOG IN <i class="fa-solid fa-right-to-bracket"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
+</div>
