@@ -5,19 +5,14 @@ import { AuthGuardService } from './_auth/auth-guard.service';
 
 const routes: Routes = [
   {
-    path:'',
-    redirectTo: '/',
-    pathMatch: 'full'
+    path: '',
+    component: BhesHomeComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path:'login',
     loadChildren: () => import('../app/features/bhes-login/bhes-login.module').then(m => m.BhesLoginModule)
   }, 
-  {
-    path: '',
-    component: BhesHomeComponent,
-    canActivate: [AuthGuardService]
-  },
 
   { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
